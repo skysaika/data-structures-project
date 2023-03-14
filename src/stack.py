@@ -1,3 +1,6 @@
+from typing import Any
+
+
 class Node:
     """Класс для узла стека"""
 
@@ -7,8 +10,8 @@ class Node:
 
         :param data: данные, которые будут храниться в узле
         """
-        self.data = data
-        self.next_node = next_node
+        self.data: Any = data
+        self.next_node: Node | None = next_node
 
 
 class Stack:
