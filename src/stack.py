@@ -37,7 +37,7 @@ class Stack:
         """
         prev_top = self.top
         self.top = self.top.next_node
-        return prev_top
+        return prev_top.data
 
 
 
