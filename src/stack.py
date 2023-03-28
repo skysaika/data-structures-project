@@ -21,6 +21,12 @@ class Stack:
         """Конструктор класса Stack"""
         self.top: Node | None = None
 
+    def __str__(self) -> str:
+        """
+        Метод строкового представления класса Stack
+        """
+        self.stack: Node
+
     def push(self, data):
         """
         Метод для добавления элемента на вершину стека
@@ -39,17 +45,13 @@ class Stack:
         self.top = self.top.next_node
         return prev_top.data
 
+    # def __str__(self) -> str:
+    #     result = ''
+    #     current_node = self.__top
+    #     while current_node is not None:
+    #         result += str(current_node.data) + ' -> '
+    #         current_node = current_node.next_node
+    #     else:
+    #         result += 'None'
+    #     return result
 
-
-# stack = Stack()
-# print(stack.top)  # None
-#
-# stack.push('data1')
-# print(stack.top.data)  # data1
-#
-# stack.push('data2')
-# print(stack.top.data) # data2
-#
-# stack.push('data3')
-# print(stack.top.data) # data3
-#

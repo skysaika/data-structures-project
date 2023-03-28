@@ -9,6 +9,7 @@ def stack() -> Stack:
     stack.push('test_data')
     return stack
 
+
 @pytest.fixture
 def node(stack) -> Node:
     return stack.top

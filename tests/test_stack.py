@@ -4,7 +4,6 @@ import unittest
 from src.stack import Stack, Node
 
 
-
 class TestStack(unittest.TestCase):
     """Тесты для модуля stack."""
 
@@ -32,5 +31,13 @@ class TestStack(unittest.TestCase):
         self.assertIs(stack.pop(), node_2.data)
         with self.assertRaises(AttributeError):
             stack.pop()
+
+    def test_str(self) -> str:
+        """Тестируем str."""
+        stack = Stack()
+        stack.push('testdata')
+        self.assertIs('testdata', str(stack.top.data))
+
+
 
 
